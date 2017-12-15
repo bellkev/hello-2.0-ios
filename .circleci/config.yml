@@ -1,7 +1,12 @@
 version: 2
 jobs:
-  build:
+  foo:
     macos:
       xcode: "9.0"
     steps:
       - run: echo hi
+workflows:
+  version: 2
+  bar:
+    jobs:
+      - foo
